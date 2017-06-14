@@ -46,6 +46,9 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'role' =>\Laratrust\Middleware\LratrustRole::class,
+        'permission' =>\Laratrust\Middleware\LaratrustPermission::class,
+        'ability' =>\Laratrust\Middleware\LaratrustAbility::class,
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

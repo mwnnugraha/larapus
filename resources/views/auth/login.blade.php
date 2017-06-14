@@ -11,7 +11,7 @@
 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                          {!! Form::label('email', 'Alamat Email', ['class'=>'col-md-4 control-label']) !!}
-                    <div class="col-md-6">
+                     <div class="col-md-6">
                             {!! Form::email('email', null, ['class'=>'form-control']) !!}
                             {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
                     </div>
@@ -37,8 +37,9 @@
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-sign-in"></i> Login
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-log-in
+">
+                                <i class="fa fa-btn fa-sign-in"></i>  Login
                             </button>
 
                             <a class="btn btn-link" href="{{ url('/password/reset') }}">lupa password</a>
