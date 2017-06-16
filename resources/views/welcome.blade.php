@@ -9,7 +9,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">Halo</div>
                                 <div class="panel-body">
-                    Wilujengsumping Larapus
+                    Selamat datang di Larapus
                     </div>
                 </div>
             </div>
