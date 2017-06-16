@@ -7,7 +7,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href ="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href ="/css/app.css" rel="stylesheet">
-    <link href ="/css/jquer.dataTables.css" rel="stylesheet">
+    <link href ="/css/jquery.dataTables.css" rel="stylesheet">
     <link href ="/css/dataTables.bootstrap.css" rel="stylesheet">
 
     <meta charset="utf-8">
@@ -53,10 +53,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
-                            <li><a href="{{ url('home') }}">Dashboard</a></li>
+                            <li><a href="{{ url('/home') }}">Dashboard</a></li>
                         @endif
                         @role('admin')
                             <li><a href="{{ route('authors.index') }}">Penulis</a></li>
+                            <li><a href="{{ route('books.index') }}">Buku</a></li>
                         @endrole
                     </ul>
 
@@ -93,6 +94,7 @@
             </div>
         </nav>
 
+        @include('layouts._flash')
         @yield('content')
     </div>
 
@@ -100,6 +102,7 @@
     <script src="/js/app.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
     @yield('scripts')
     @include('layouts.menu')
 </body>
