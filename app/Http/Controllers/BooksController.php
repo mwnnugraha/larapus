@@ -23,7 +23,7 @@ class BooksController extends Controller
                     return view('datatable._action', [
                         'model'    =>   $book,
                         'form_url' => route('books.destroy', $book->id),
-                        'edit_url'  => route('books.edit', $book->),
+                        'edit_url'  => route('books.edit', $book->id),
                         'confirm_message' => 'Yakin mau menghapus' . $book->title . '?'
                         ]);
                 })->make(true);
@@ -33,7 +33,7 @@ class BooksController extends Controller
             ->addColumn(['data' => 'title', 'name'=>'title', 'title'=>'JUdul'])
             ->addColumn(['data' => 'amount', 'name'=>'amount', 'title'=>'Jumlah'])
             ->addColumn(['data' => 'author.name', 'name'=>'author.name', 'title'=>'Penulis'])
-            ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false,'searchable'=>faise]);
+            ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false,'searchable'=>false]);
             return view('books.index')->with(compact('html'));
     }
 
@@ -44,7 +44,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return view('bokks.create');
     }
 
     /**

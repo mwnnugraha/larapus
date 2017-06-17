@@ -24,7 +24,7 @@ Route::group(['middleware' => 'web'], function () {
 Route::group(['prefix'=>'admin', 'middleware'=>['auth', 'role:admin']], function () {
 
 Route::resource('authors', 'AuthorsController');
-Route::resource('book', 'BooksController');
+Route::resource('books', 'BooksController');
 
 });
 });
